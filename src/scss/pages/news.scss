@@ -1,0 +1,51 @@
+@import "./../components/news/news-list";
+@import "./../components/news/news-form";
+
+.news {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0 107px 0;
+    width: 100%;
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -20px;
+        width: 633px;
+        height: 973px;
+        background: url("../../images/news/news-bg-xxl.png") no-repeat center;
+        background-size: cover;
+        z-index: -1;
+        pointer-events: none;
+        @include lg-devices {
+            background: url("../../images/news/news-bg-lg.png") no-repeat center;
+            width: 539px;
+            height: 975px;
+            background-size: cover;
+        }
+        @include md-devices {
+            display: none;
+        }
+        @include sm-devices {
+            display: none;
+        }
+    }
+    @include xl-devices {
+        padding: 50px 0 100px 0;
+    }
+    @include lg-devices {
+        padding: 50px 0 102px 0;
+    }
+    @include md-devices {
+        padding: 50px 0 60px 0;
+    }
+    @include sm-devices {
+        padding: 15px 0 51px 0;
+    }
+
+    .pagination-wrapper {
+        order: 2;
+    }
+}

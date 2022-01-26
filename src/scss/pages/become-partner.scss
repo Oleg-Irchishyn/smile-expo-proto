@@ -1,0 +1,59 @@
+@import "./../components/become-partner/form";
+
+.become-partner {
+    position: relative;
+    width: 100%;
+    padding: 50px 0 122px 0;
+    @include xl-devices {
+        padding: 50px 0 100px 0;
+    }
+    @include lg-devices {
+        padding: 50px 0 100px 0;
+    }
+    @include md-devices {
+        padding: 50px 0 71px 0;
+    }
+    @include sm-devices {
+        padding: 15px 0 62px 0;
+    }
+    .section-title {
+        z-index: 2;
+        @include md-devices {
+            margin: 0 0 50px 0;
+        }
+        @include sm-devices {
+            margin: 0 0 30px 0;
+        }
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -20px;
+        width: 633px;
+        height: 766px;
+        background: url("../../images/become-partner/become-partner-bg-xxl.png") no-repeat center;
+        background-size: cover;
+        z-index: -1;
+        pointer-events: none;
+        @include xl-devices {
+            background: url("../../images/become-partner/become-partner-bg-xl.png") no-repeat center;
+            width: 475px;
+            height: 744px;
+            background-size: cover;
+        }
+        @include lg-devices {
+            background: url("../../images/become-partner/become-partner-bg-lg.png") no-repeat center;
+            width: 475px;
+            height: 744px;
+            background-size: cover;
+        }
+        @include md-devices {
+            display: none;
+        }
+        @include sm-devices {
+            display: none;
+        }
+    }
+}

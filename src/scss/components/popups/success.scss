@@ -1,0 +1,122 @@
+.success-modal-dialog {
+    box-shadow: 1px 1px 12px 4px rgba(238, 120, 41, 0.76);
+    width: 100%;
+    margin: 0.5rem auto;
+    pointer-events: none;
+    max-width: 300px;
+    background: $bg-main-color;
+    padding: 0;
+    @media (min-width: 576px) {
+        max-width: 500px;
+        margin: 1.75rem auto;
+    }
+    @media (min-width: 768px) {
+        max-width: 600px;
+        margin: 1.75rem auto;
+    }
+    .modal-content {
+        border: none;
+        border-radius: 0;
+        background: url("../../../images/popups/faq-popup/faq-modal-bg.png") no-repeat center;
+        background-size: cover;
+        padding: 58px 145px 52px 61px;
+        @include xs-devices {
+            padding: 30px 10px 30px 10px;
+        }
+
+        .close {
+            position: absolute;
+            right: calc(0% + 20px);
+            top: calc(0% + 20px);
+            padding: 7px;
+            margin: 0;
+            background: $bg-main-color;
+            cursor: pointer;
+            @include sm-devices {
+                right: calc(0% + 10px);
+                top: calc(0% + 10px);
+            }
+            &:hover {
+                @media (min-width: 992px) {
+                    &::before,
+                    &::after {
+                        background: $bg-btn;
+                        transition: 0.2s ease;
+                    }
+                }
+            }
+            &::before {
+                content: "";
+                background: $color-placeholder;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                height: 100%;
+                width: 2px;
+                transform: translate(-50%, -50%) rotate(45deg);
+                transition: 0.2s ease;
+            }
+            &::after {
+                content: "";
+                background: $color-placeholder;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                height: 100%;
+                width: 2px;
+                transform: translate(-50%, -50%) rotate(-45deg);
+                transition: 0.2s ease;
+            }
+        }
+
+        .modal-body {
+            width: 100%;
+            border-radius: 0;
+            border: none;
+            padding: 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            .image {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border: 2px solid $bg-btn;
+                max-width: 80px;
+                min-height: 80px;
+                width: 100%;
+                margin: 0 0 34px 0;
+                img {
+                    width: 18px;
+                    height: 14px;
+                    object-fit: cover;
+                }
+            }
+            .title {
+                font-family: $font-secondary;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 31px;
+                color: $color-white;
+                text-align: left;
+                margin: 0 0 14px 0;
+            }
+            .text {
+                font-family: $font-secondary;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 24px;
+                color: $color-placeholder;
+                text-align: left;
+                @include sm-devices {
+                    font-size: 16px;
+                    line-height: normal;
+                }
+            }
+        }
+    }
+}

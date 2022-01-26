@@ -1,0 +1,65 @@
+@import "./../components/single-news/single-news-content";
+@import "./../components/news/news-form";
+
+.single-news {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0 121px 0;
+    width: 100%;
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -20px;
+        width: 1051px;
+        height: 1615px;
+        background: url("../../images/single-news/single-news-bg-xxl.png") no-repeat center;
+        background-size: cover;
+        z-index: -1;
+        pointer-events: none;
+        @include xl-devices {
+            background: url("../../images/single-news/single-news-bg-xl.png") no-repeat center;
+            width: 925px;
+            height: 1455px;
+            background-size: cover;
+        }
+        @include lg-devices {
+            background: url("../../images/single-news/single-news-bg-lg.png") no-repeat center;
+            width: 633px;
+            height: 975px;
+            background-size: cover;
+        }
+        @include md-devices {
+            display: none;
+        }
+        @include sm-devices {
+            display: none;
+        }
+    }
+    @include xl-devices {
+        padding: 50px 0 100px 0;
+    }
+    @include lg-devices {
+        padding: 77px 0 30px 0;
+    }
+    @include md-devices {
+        padding: 50px 0 90px 0;
+    }
+    @include sm-devices {
+        padding: 15px 0 57px 0;
+    }
+    .subscribe-form {
+        order: 2;
+        @include xl-devices {
+            margin-top: 50px;
+        }
+        @include md-devices {
+            margin-top: 22px;
+        }
+        @include sm-devices {
+            margin-top: 30px;
+        }
+    }
+}

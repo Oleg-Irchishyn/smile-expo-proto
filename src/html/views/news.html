@@ -1,0 +1,15 @@
+<%= _.template(require('./../includes/common/head.html').default)(data) %>
+<body>
+    <%= _.template(require('./../includes/common/header.html').default)(data) %>
+    <%= _.template(require('./../includes/common/breadcrumbs.html').default)(data) %>
+    <section class="news" id="news">
+     <%= _.template(require('./../includes/news/news-list.html').default)(data) %>
+      <%= _.template(require('./../includes/news/news-form.html').default)(data) %>
+      <%= _.template(require('./../includes/common/pagination.html').default)(data) %>
+    </section>
+    <%= _.template(require('./../includes/common/footer.html').default)(data) %>
+    <%= _.template(require('./../includes/popups/faq.html').default)(data) %>
+    <%= _.template(require('./../includes/popups/subscribe.html').default)(data) %>
+    <%= _.template(require('./../includes/popups/success.html').default)(data) %>
+    <%= _.template(require('./../includes/news/page-end.html').default)(data) %>
+</body>

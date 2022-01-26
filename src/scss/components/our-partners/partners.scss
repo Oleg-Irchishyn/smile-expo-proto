@@ -1,0 +1,291 @@
+.our-partners {
+  position: relative;
+  width: 100%;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    top: -20px;
+    width: 633px;
+    height: 919px;
+    background: url("../../../images/our-partners/our-partners-bg-xxl.png") no-repeat center;
+    background-size: 100% 100%;
+    z-index: -1;
+    pointer-events: none;
+    @include xl-devices {
+      background: url("../../../images/our-partners/our-partners-bg-xl.png") no-repeat center;
+      width: 633px;
+      height: 898px;
+      background-size: 100% 100%;
+    }
+    @include lg-devices {
+      background: url("../../../images/our-partners/our-partners-bg-lg.png") no-repeat center;
+      width: 633px;
+      height: 975px;
+      background-size: 100% 100%;
+    }
+    @include md-devices {
+      display: none;
+    }
+    @include sm-devices {
+      display: none;
+    }
+  }
+  @include xxl-devices {
+    padding: 50px 0 112px 0;
+  }
+  @include xl-devices {
+    padding: 50px 0 91px 0;
+  }
+  @include lg-devices {
+    padding: 50px 0 74px 0;
+  }
+  @include md-devices {
+    padding: 50px 0 56px 0;
+  }
+  @include sm-devices {
+    padding: 15px 0 60px 0;
+  }
+  &-list-wrapper {
+    position: relative;
+    z-index: 2;
+    margin: 0 auto 0 auto;
+    @include xxl-devices {
+      max-width: 1590px;
+    }
+    @include xl-devices {
+      max-width: 1200px;
+    }
+    @include lg-devices {
+      max-width: 990px;
+    }
+    &.unslicked {
+      .our-partners-list-next-arrow {
+        display: none;
+      }
+      @include xxl-devices {
+        max-width: 1560px;
+      }
+      @include xl-devices {
+        max-width: 1170px;
+      }
+      @include lg-devices {
+        max-width: 960px;
+      }
+      @include md-devices {
+        max-width: 740px;
+      }
+      @include sm-devices {
+        max-width: 290px;
+      }
+    }
+  }
+  &-list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    .slick-list {
+      div {
+        position: relative;
+      }
+      @include md-devices {
+        width: calc((100vw - 770px) / 2 + 770px);
+        padding-right: calc((100vw - 555px) / 2) !important;
+        margin-left: calc((100vw - 770px) / 2);
+      }
+      @include sm-devices {
+        width: calc((100vw - 320px) / 2 + 320px);
+        padding-right: calc((100vw - 320px) / 2) !important;
+        margin-left: calc((100vw - 320px) / 2);
+      }
+    }
+    .slick-slide {
+      margin: 0 15px;
+    }
+
+    .item {
+      position: relative;
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: 2px solid #ffffff;
+      min-height: 224px;
+      margin: 0 0 30px 0;
+      &-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        flex: 1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        img {
+          width: auto;
+          height: auto;
+          max-width: 100%;
+          transform: none;
+          transition: .2s ease;
+          &:hover {
+            @media (min-width: 992px) {
+              transform: scale(1.5);
+              transition: .2s ease;
+            }
+          }
+       
+        }
+      }
+      &.unslicked-item {
+        width: 100%;
+        margin: 0 30px 30px 0;
+        @include xxl-devices {
+          max-width: 367px;
+          &:nth-of-type(4n) {
+            margin: 0 0 30px 0;
+          }
+        }
+        @include xl-devices {
+          max-width: 370px;
+          &:nth-of-type(3n) {
+            margin: 0 0 30px 0;
+          }
+        }
+        @include lg-devices {
+          max-width: 300px;
+          &:nth-of-type(3n) {
+            margin: 0 0 30px 0;
+          }
+        }
+        @include md-devices {
+          max-width: 302px;
+          &:nth-of-type(2n) {
+            margin: 0 0 30px 0;
+          }
+        }
+        @include sm-devices {
+          max-width: 290px;
+          margin: 0 0 30px 0;
+        }
+      }
+    }
+    .slick-dots {
+      margin: 0 auto;
+      width: 100%;
+      max-width: 1560px;
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      @include xl-devices {
+        max-width: 1170px;
+      }
+      @include lg-devices {
+        max-width: 960px;
+      }
+      @include md-devices {
+        max-width: 740px;
+      }
+      @include sm-devices {
+        max-width: 290px;
+      }
+      li {
+        width: 73px;
+        height: 4px;
+        background: $bg-dropdown;
+
+        &.slick-active {
+          background: $bg-btn;
+        }
+        @include xxl-devices {
+          margin: 0 33px 30px 0;
+          &:nth-of-type(15n) {
+            margin: 0 0 25px 0;
+          }
+        }
+        @include xl-devices {
+          margin: 0 36px 30px 0;
+          &:nth-of-type(11n) {
+            margin: 0 0 25px 0;
+          }
+        }
+        @include lg-devices {
+          width: 60px;
+          height: 3px;
+          margin: 0 30px 25px 0;
+          &:nth-of-type(11n) {
+            margin: 0 0 25px 0;
+          }
+        }
+        @include md-devices {
+          width: 60px;
+          height: 3px;
+          margin: 0 25px 25px 0;
+          &:nth-of-type(9n) {
+            margin: 0 0 25px 0;
+          }
+        }
+        @include sm-devices {
+          width: 57px;
+          height: 3px;
+          margin: 0 20.6px 35px 0;
+          &:nth-of-type(4n) {
+            margin: 0 0 35px 0;
+          }
+        }
+        button {
+          width: inherit;
+          height: inherit;
+        }
+      }
+    }
+  }
+  &-list-next-arrow {
+    width: 118px;
+    height: 87px;
+    position: absolute;
+    right: 0;
+    top: 50px;
+    z-index: 2;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    @include xxl-devices {
+      top: 46%;
+      right: calc(0% - 180px);
+    }
+    @include xl-devices {
+      top: calc(100% + 40px);
+      right: calc(0% - 60px);
+      height: 80px;
+    }
+    @include lg-devices {
+      top: calc(100% + 32px);
+      right: calc(0% - 60px);
+      height: 65px;
+    }
+    @include md-devices {
+      display: none !important;
+    }
+    @include sm-devices {
+      display: none !important;
+    }
+    svg {
+      &:hover,
+      &:focus {
+        path {
+          transition: 0.2s ease;
+          stroke: $bg-btn !important;
+          stroke-opacity: 1 !important;
+        }
+      }
+    }
+  }
+}

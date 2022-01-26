@@ -1,0 +1,301 @@
+.our-achievements {
+    position: relative;
+    width: 100%;
+    padding: 0 0 114px 0;
+    @include xl-devices {
+        padding: 0 0 42px 0;
+    }
+    @include lg-devices {
+        padding: 0 0 82px 0;
+    }
+    @include md-devices {
+        padding: 0 0 70px 0;
+    }
+    @include sm-devices {
+        padding: 0 0 10px 0;
+    }
+    .section-title {
+        z-index: 2;
+        @include md-devices {
+            margin: 0 0 50px 0;
+        }
+        @include sm-devices {
+            margin: 0 0 15px 0;
+        }
+        &:last-of-type {
+            margin: 0;
+        }
+    }
+    &::before {
+        display: none;
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 1034px;
+        z-index: -1;
+        pointer-events: none;
+        @include xxl-devices {
+            display: block;
+            top: calc(0% + 319px);
+            background: url("../../../images/about-company/our-achievements-bg-xxl.png") no-repeat center;
+            background-size: cover;
+        }
+        @include xl-devices {
+            display: block;
+            top: calc(0% + 726px);
+            background: url("../../../images/about-company/our-achievements-bg-xl.png") no-repeat center;
+            background-size: cover;
+        }
+        @include lg-devices {
+            display: block;
+            top: calc(0% + 1030px);
+            background: url("../../../images/about-company/our-achievements-bg-lg.png") no-repeat center;
+            background-size: cover;
+        }
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 114px;
+        width: 100%;
+        height: 490px;
+        background: url("../../../images/about-company/our-achievements-lines.png") no-repeat center;
+        background-size: cover;
+        pointer-events: none;
+        z-index: -1;
+        @include xl-devices {
+            bottom: 0;
+        }
+        @include lg-devices {
+            bottom: 0;
+        }
+        @include md-devices {
+            bottom: 70px;
+            height: 245px;
+            background-size: 100% 100%;
+        }
+        @include sm-devices {
+            bottom: 10px;
+            height: 245px;
+            background-size: 100% 100%;
+        }
+    }
+}
+
+.our-achievements-list__wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: 0 auto;
+    @include xxl-devices {
+        max-width: 1590px;
+        padding: 0 0 20px 0;
+    }
+    @include xl-devices {
+        max-width: 1200px;
+        padding: 0 0 20px 0;
+    }
+    @include lg-devices {
+        padding: 0 0 40px 0;
+    }
+    @include md-devices {
+        padding: 0 0 40px 0;
+    }
+    @include sm-devices {
+        padding: 15px 0 20px 0;
+    }
+    &.unslicked {
+        @include xxl-devices {
+            max-width: 1560px;
+        }
+        @include xl-devices {
+            max-width: 1170px;
+        }
+        @include lg-devices {
+            max-width: 960px;
+        }
+        @include sm-devices {
+            padding: 0 0 20px 0;
+        }
+    }
+}
+.our-achievements-list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    width: 100%;
+    @include sm-devices {
+        width: calc((100vw - 320px) / 2 + 320px);
+        padding-right: calc((100vw - 320px) / 2) !important;
+        margin-left: calc((100vw - 320px) / 2);
+    }
+    .slick-list {
+        width: 100%;
+        @include xxl-devices {
+            width: calc((100vw - 1590px) / 2 + 1590px);
+            padding-right: 0 !important;
+            margin-left: 0;
+        }
+        @include xl-devices {
+            width: calc((100vw - 1200px) / 2 + 1200px);
+            padding-right: 0 !important;
+            margin-left: 0;
+        }
+        @include lg-devices {
+            width: calc((100vw - 990px) / 2 + 990px);
+            padding-right: calc((100vw - 210px) / 2) !important;
+            margin-left: calc((100vw - 990px) / 2);
+        }
+
+        @include md-devices {
+            width: calc((100vw - 770px) / 2 + 770px);
+            padding-right: calc((100vw - 430px) / 2) !important;
+            margin-left: calc((100vw - 770px) / 2);
+        }
+    }
+    .slick-slide {
+        position: relative;
+        @include xxl-devices {
+            margin: 0 15px;
+        }
+        @include xl-devices {
+            margin: 0 15px;
+        }
+        @include lg-devices {
+            margin: 0 15px;
+        }
+        @include md-devices {
+            margin: 0 15px;
+        }
+        @include sm-devices {
+            margin: 0 0 15px 0;
+        }
+    }
+
+    .item {
+        position: relative;
+        display: flex !important;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background: $bg-dropdown;
+        margin: 0 0 30px 0;
+        padding: 50px 47px 50px 42px;
+        color: initial;
+        @include xxl-devices {
+            padding: 50px 42px 50px 42px;
+        }
+
+        @include sm-devices {
+            padding: 27px 13px 20px 13px;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+
+        &.unslicked-item {
+            max-width: 765px;
+            width: 100%;
+            margin: 0 30px 30px 0;
+
+            @include xxl-devices {
+                max-width: 765px;
+                &:nth-of-type(2n) {
+                    margin: 0 0 30px 0;
+                }
+            }
+            @include xl-devices {
+                max-width: 570px;
+                &:nth-of-type(2n) {
+                    margin: 0 0 30px 0;
+                }
+            }
+            @include lg-devices {
+                max-width: 465px;
+                &:nth-of-type(2n) {
+                    margin: 0 0 30px 0;
+                }
+            }
+            @include md-devices {
+                max-width: 355px;
+                margin-left: calc((100vw - 740px) / 2);
+                &:nth-of-type(2n) {
+                    margin: 0 0 30px 0;
+                }
+            }
+            @include sm-devices {
+                max-width: 290px;
+                margin-left: calc((100vw - 290px) / 2);
+                margin-top: 15px;
+                margin-bottom: 15px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &-header {
+            width: 100%;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+            margin: 0 0 30px 0;
+            @include sm-devices {
+                margin: 0 0 15px 0;
+            }
+        }
+
+        &-image {
+            position: relative;
+            img {
+                width: auto;
+                max-width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+        }
+
+        &-body {
+            width: 100%;
+            flex: 1;
+
+            .title {
+                display: inline;
+                font-family: $font-secondary;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 39px;
+                color: $color-white;
+                text-align: left;
+                margin: 0 1px 0 0;
+                background: $bg-btn;
+                @include sm-devices {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+            }
+            .descr {
+                display: inline;
+                font-family: $font-secondary;
+                font-weight: 400;
+                font-size: 24px;
+                line-height: 29px;
+                color: $color-placeholder;
+                text-align: left;
+                margin: 0;
+                @include sm-devices {
+                    font-size: 18px;
+                    line-height: 22px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,68 @@
+@import "./../components/404/error-page";
+
+.error-page {
+    position: relative;
+    width: 100%;
+    padding: 50px 0 146px 0;
+    @include xl-devices {
+        padding: 50px 0 139px 0;
+    }
+    @include lg-devices {
+        padding: 50px 0 77px 0;
+    }
+    @include md-devices {
+        padding: 50px 0 77px 0;
+    }
+    @include sm-devices {
+        padding: 15px 0 69px 0;
+    }
+    .section-title {
+        z-index: 2;
+        @include xxl-devices {
+            margin: 0 0 30px 0;
+        }
+        @include xl-devices {
+            margin: 0 0 30px 0;
+        }
+        @include lg-devices {
+            margin: 0 0 30px 0;
+        }
+        @include md-devices {
+            margin: 0 0 30px 0;
+        }
+        @include sm-devices {
+            margin: 0 0 30px 0;
+        }
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -20px;
+        width: 633px;
+        height: 573px;
+        background: url("../../images/404/404-bg-xxl.png") no-repeat center;
+        background-size: cover;
+        z-index: -1;
+        pointer-events: none;
+        @include xl-devices {
+            background: url("../../images/404/404-bg-xl.png") no-repeat center;
+            width: 483px;
+            height: 576px;
+            background-size: cover;
+        }
+        @include lg-devices {
+            background: url("../../images/404/404-bg-xl.png") no-repeat center;
+            width: 483px;
+            height: 576px;
+            background-size: cover;
+        }
+        @include md-devices {
+            display: none;
+        }
+        @include sm-devices {
+            display: none;
+        }
+    }
+}

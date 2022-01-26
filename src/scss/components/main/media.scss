@@ -1,0 +1,471 @@
+.media {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0 45px 0;
+    width: 100%;
+    @include xl-devices {
+        padding: 0 0 75px 0;
+    }
+    @include lg-devices {
+        padding: 0 0 100px 0;
+    }
+    @include md-devices {
+        padding: 0 0 100px 0;
+    }
+    @include sm-devices {
+        padding: 0 0 70px 0;
+    }
+    .section-title {
+        h2 {
+            @include sm-devices {
+                max-width: 60%;
+                margin-bottom: 15px;
+            }
+            
+        }
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 1508px;
+        height: 378px;
+        z-index: 2;
+        background: url("../../../images/main/media-bg.png") no-repeat center;
+        background-size: cover;
+        pointer-events: none;
+        @include xl-devices {
+            width: 1106px;
+            height: 277px;
+            bottom: 115px;
+        }
+        @include lg-devices {
+            width: 905px;
+            height: 282px;
+            background: url("../../../images/main/media-bg-lg.png") no-repeat center;
+            background-size: cover;
+            pointer-events: none;
+        }
+        @include md-devices {
+            width: 689px;
+            height: 277px;
+            background: url("../../../images/main/media-bg-md.png") no-repeat center;
+            background-size: cover;
+            pointer-events: none;
+        }
+        @include sm-devices {
+            display: none;
+        }
+    }
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: -340px;
+        width: 509px;
+        height: 1277px;
+        background: url("../../../images/main/media-wrapper-bg.png") no-repeat center;
+        background-size: cover;
+        pointer-events: none;
+        z-index: 2;
+        @include xl-devices {
+            top: -535px;
+        }
+        @include lg-devices {
+            width: 245px;
+            height: 615px;
+            top: 270px;
+        }
+        @include md-devices {
+            width: 245px;
+            height: 615px;
+            top: 90px;
+        }
+        @include sm-devices {
+            display: none;
+        }
+    }
+    .section-title {
+        h2 {
+            @include xxl-devices {
+                padding-right: 918px;
+            }
+            @include xl-devices {
+                padding-right: 590px;
+            }
+            @include lg-devices {
+                padding-right: 568px;
+            }
+        }
+    }
+    &-list-arrows {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: center;
+        position: absolute;
+        top: calc(0% - 130px);
+        right: calc(0% + 15px);
+        width: 898px;
+        height: 82px;
+        border: 3px solid $bg-btn;
+        padding: 0 0 0 41px;
+        @include xl-devices {
+            width: 570px;
+            height: 82px;
+            padding: 0 0 0 35px;
+            top: calc(0% - 135px);
+        }
+        @include lg-devices {
+            width: 548px;
+            height: 67px;
+            padding: 0 0 0 35px;
+            top: calc(0% - 135px);
+        }
+        @include md-devices {
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 548px;
+            height: 67px;
+            padding: 0 0 0 35px;
+            margin-left: calc((100vw - 740px) / 2);
+            margin-bottom: 30px;
+        }
+        @include sm-devices {
+            position: relative;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 290px;
+            height: 67px;
+            padding: 0 0 0 35px;
+            margin-left: calc((100vw - 290px) / 2);
+            margin-bottom: 15px;
+        }
+        .text {
+            display: block;
+            font-family: $font-main;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 31px;
+            text-align: left;
+            color: $color-white;
+            margin: 0 auto 0 0;
+            flex: 1;
+            @include lg-devices {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            @include md-devices {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            @include sm-devices {
+                font-size: 14px;
+                line-height: 17px;
+            }
+        }
+        div {
+            width: 13px;
+            margin: 0 33px 0 0;
+            cursor: pointer;
+            &.slick-disabled {
+                opacity: 0.7;
+                pointer-events: none;
+            }
+            @include lg-devices {
+                margin: 0 31px 0 0;
+            }
+            @include md-devices {
+                margin: 0 31px 0 0;
+            }
+            @include sm-devices {
+                margin: 0 20px 0 0;
+            }
+            &:nth-of-type(1) {
+                margin: 0 26px 0 0;
+                @include sm-devices {
+                    margin: 0 16px 0 0;
+                }
+            }
+            img {
+                max-width: 100%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+    &-list-wrapper {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        margin: 0 auto 50px auto;
+        @include xxl-devices {
+            max-width: 1590px;
+            margin-top: 5px;
+        }
+        @include xl-devices {
+            max-width: 1200px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        @include lg-devices {
+            max-width: 990px;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        @include md-devices {
+            margin: 0 0 30px 0;
+        }
+        @include sm-devices {
+            margin: 0 0 30px 0;
+        }
+        &.unslicked {
+            .media-list-arrows {
+                display: none;
+            }
+            @include xxl-devices {
+                max-width: 1560px;
+            }
+            @include xl-devices {
+                max-width: 1170px;
+            }
+            @include lg-devices {
+                max-width: 960px;
+            }
+        }
+    }
+    &-list {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: flex-start;
+        .slick-list {
+            div {
+                position: relative;
+            }
+            @include md-devices {
+                width: calc((100vw - 770px) / 2 + 770px);
+                padding-right: calc((100vw - 216.5px) / 2) !important;
+                margin-left: calc((100vw - 770px) / 2);
+            }
+            @include sm-devices {
+                width: calc((100vw - 320px) / 2 + 320px);
+                padding-right: calc((100vw - 320px) / 2) !important;
+                margin-left: calc((100vw - 320px) / 2);
+                height: calc((100vw - 320px) / 2 + 320px);
+            }
+        }
+        .slick-slide {
+            @include xxl-devices {
+                margin: 0 15px;
+            }
+            @include xl-devices {
+                margin: 0 15px;
+            }
+            @include lg-devices {
+                margin: 0 15px;
+            }
+            @include md-devices {
+                margin: 0 15px;
+            }
+            @include sm-devices {
+                margin: 15px;
+            }
+        }
+
+        .item {
+            position: relative;
+            display: flex !important;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            background: transparent;
+            margin: 0;
+            &-video {
+                position: relative;
+                display: block;
+                width: 100%;
+                padding-bottom: 56%;
+                margin: 0 0 25px 0;
+                cursor: pointer;
+                @include xl-devices {
+                    padding-bottom: 49.2%;
+                    margin: 0 0 60px 0;
+                }
+                @include lg-devices {
+                    margin: 0 0 15px 0;
+                }
+                @include md-devices {
+                    padding-bottom: 56.3%;
+                    margin: 0 0 15px 0;
+                }
+                @include sm-devices {
+                    padding-bottom: 56.3%;
+                    margin: 0 0 15px 0;
+                }
+                iframe {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                }
+                .placeholder {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: 2;
+                    &-bg {
+                        width: 100%;
+                        height: 100%;
+                        max-width: 100%;
+                    }
+                    .play {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 118px;
+                        height: 118px;
+                        border: 1px solid $color-white;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        img {
+                            width: 100%;
+                            max-width: 19px;
+                            height: 22px;
+                            object-fit: cover;
+                        }
+                        @include lg-devices {
+                            width: 110px;
+                            height: 110px;
+                            img {
+                                max-width: 18px;
+                                height: 20px;
+                            }
+                        }
+                        @include md-devices {
+                            width: 110px;
+                            height: 110px;
+                            img {
+                                max-width: 18px;
+                                height: 20px;
+                            }
+                        }
+                        @include sm-devices {
+                            width: 68px;
+                            height: 68px;
+                            img {
+                                max-width: 12px;
+                                height: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+            &-content {
+                width: 100%;
+                flex: 1;
+                .title {
+                    font-family: $font-secondary;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: $color-placeholder;
+                    text-align: left;
+                    width: 100%;
+                    margin: 0 0 10px 0;
+                    @include lg-devices {
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                    @include md-devices {
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                    @include sm-devices {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                }
+                .descr {
+                    font-family: $font-secondary;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 31px;
+                    color: $color-white;
+                    text-align: left;
+                    width: 100%;
+                    margin: 0;
+                    @include lg-devices {
+                        font-size: 20px;
+                        line-height: 26px;
+                    }
+                    @include md-devices {
+                        font-size: 20px;
+                        line-height: 26px;
+                    }
+                    @include sm-devices {
+                        font-size: 18px;
+                        line-height: 23px;
+                    }
+                }
+            }
+            &.unslicked-item {
+                max-width: 500px;
+                width: 100%;
+                margin: 0 30px 30px 0;
+
+                @include xxl-devices {
+                    max-width: 500px;
+                    &:nth-of-type(3n) {
+                        margin: 0 0 30px 0;
+                    }
+                }
+                @include xl-devices {
+                    max-width: 570px;
+                    &:nth-of-type(2n) {
+                        margin: 0 0 30px 0;
+                    }
+                }
+                @include lg-devices {
+                    max-width: 465px;
+                    &:nth-of-type(2n) {
+                        margin: 0 0 30px 0;
+                    }
+                }
+                @include md-devices {
+                    max-width: 355px;
+                    margin-left: calc((100vw - 740px) / 2);
+                    &:nth-of-type(2n) {
+                        margin: 0 0 30px 0;
+                    }
+                }
+                @include sm-devices {
+                    max-width: 290px;
+                    margin-left: calc((100vw - 290px) / 2);
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

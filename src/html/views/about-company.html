@@ -1,0 +1,15 @@
+<%= _.template(require('./../includes/common/head.html').default)(data) %>
+<body>
+    <%= _.template(require('./../includes/common/header.html').default)(data) %>
+    <section class="about-company single-page" id="about-company">
+         <%= _.template(require('./../includes/about-company/hero-screen.html').default)(data) %>
+          <%= _.template(require('./../includes/about-company/key-areas.html').default)(data) %>
+            <%= _.template(require('./../includes/about-company/history-numbers.html').default)(data) %>
+            <%= _.template(require('./../includes/about-company/our-achievements.html').default)(data) %>
+    </section>
+    <%= _.template(require('./../includes/common/footer.html').default)(data) %>
+    <%= _.template(require('./../includes/popups/faq.html').default)(data) %>
+    <%= _.template(require('./../includes/popups/subscribe.html').default)(data) %>
+    <%= _.template(require('./../includes/popups/success.html').default)(data) %>
+    <%= _.template(require('./../includes/about-company/page-end.html').default)(data) %>
+</body>

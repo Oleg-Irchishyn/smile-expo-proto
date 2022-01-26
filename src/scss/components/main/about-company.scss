@@ -1,0 +1,332 @@
+.about-company {
+  position: relative;
+  width: 100%;
+  padding: 130px 0 0 0;
+  @include xl-devices {
+    padding: 70px 0 0 0;
+  }
+  @include lg-devices {
+    padding: 70px 0 0 0;
+  }
+  @include md-devices {
+    padding: 50px 0 50px 0;
+  }
+  @include sm-devices {
+    padding: 15px 0 50px 0;
+  }
+
+  &-content {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: url("../../../images/main/about-company-bg.png") no-repeat center;
+      background-size: cover;
+      width: 1263px;
+      height: 618px;
+      pointer-events: none;
+      @include xl-devices {
+        width: 1025px;
+        height: 517px;
+        top: calc(0% - 95px);
+      }
+      @include lg-devices {
+        width: 777px;
+        height: 392px;
+      }
+      @include md-devices {
+        width: 777px;
+        height: 392px;
+      }
+      @include sm-devices {
+        display: none;
+      }
+    }
+  }
+  &-infoblock {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 175px 0;
+    @include xl-devices {
+      padding: 0 0 205px 0;
+    }
+    @include lg-devices {
+      padding: 0 0 90px 0;
+    }
+    @include md-devices {
+      padding: 0 0 35px 0;
+    }
+    @include sm-devices {
+      padding: 0 0 30px 0;
+    }
+    .about-company-infoblock__text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      max-width: 579px;
+      width: 100%;
+      margin: 0 auto 0 0;
+      @include lg-devices {
+        max-width: 463px;
+      }
+      @include md-devices {
+        max-width: 100%;
+      }
+      @include sm-devices {
+        max-width: 100%;
+      }
+      .title {
+        font-family: $font-main;
+        font-weight: 700;
+        font-size: 100px;
+        line-height: 118px;
+        color: $bg-btn;
+        text-align: left;
+        margin: 0 0 30px 0;
+        @include lg-devices {
+          font-size: 80px;
+          line-height: 95px;
+        }
+        @include md-devices {
+          font-size: 80px;
+          line-height: 95px;
+          margin: 0 0 25px 0;
+        }
+        @include sm-devices {
+          font-size: 40px;
+          line-height: 47px;
+          margin: 0 0 10px 0;
+        }
+      }
+      .text {
+        max-width: 539px;
+        width: 100%;
+        font-family: $font-secondary;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 31px;
+        color: $color-white;
+        text-align: left;
+        margin: 0;
+        @include md-devices {
+          max-width: 100%;
+        }
+        @include sm-devices {
+          font-size: 18px;
+          line-height: 22px;
+        }
+      }
+    }
+    .about-company-infoblock__list {
+      margin: 100px auto 0 0;
+      list-style-type: none;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      max-width: 100%;
+      width: 100%;
+      @include xxl-devices {
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: flex-start;
+        max-width: 854px;
+      }
+      @include xl-devices {
+        max-width: 455px;
+        margin: 100px 0 0 0;
+      }
+      @include lg-devices {
+        max-width: 335px;
+        margin: 100px 0 0 0;
+      }
+      @include md-devices {
+        margin: 30px 0 0 10px;
+      }
+      @include sm-devices {
+        margin: 15px 0 0 10px;
+      }
+
+      li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        font-family: $font-secondary;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 31px;
+        color: $color-white;
+        width: 100%;
+        max-width: 100%;
+        @include xxl-devices {
+          max-width: 39.2%;
+        }
+        @include xl-devices {
+          margin: 0 0 30px 0;
+        }
+        @include lg-devices {
+          margin: 0 0 30px 0;
+        }
+        @include md-devices {
+          margin: 0 0 30px 0;
+        }
+        @include sm-devices {
+          font-size: 18px;
+          line-height: 23px;
+          margin: 0 0 11px 0;
+        }
+
+        &:nth-of-type(odd) {
+          @include xxl-devices {
+            margin: 0 auto 32px 0;
+          }
+        }
+        &:last-of-type {
+          margin: 0;
+        }
+        &::before {
+          content: ".";
+          font-size: 22px;
+          line-height: 1;
+          width: 14px;
+          height: 14px;
+          border: 2px solid $bg-btn;
+          display: inline-flex;
+          align-items: flex-end;
+          justify-content: center;
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+  &-buttons {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    @include md-devices {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    a {
+      position: relative;
+      padding: 0 0 13px 13px;
+      font-size: 24px;
+      min-height: 80px;
+      max-width: 50%;
+      width: 100%;
+      transition: 0.2s ease;
+      border: 2px solid transparent;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: calc(0% + 16px);
+        top: calc(0% + 16px);
+        width: 13px;
+        height: 13px;
+        background: url("../../../images/icons/btn-arrow-right.svg") no-repeat center;
+        background-size: cover;
+        @include sm-devices {
+          width: 11px;
+          height: 11px;
+          right: calc(0% + 13px);
+          top: calc(0% + 11px);
+        }
+      }
+      @include lg-devices {
+        padding: 0 0 10px 10px;
+      }
+      @include md-devices {
+        font-size: 20px;
+        padding: 0 0 17px 13px;
+        margin: 0 0 30px 0;
+        max-width: 100%;
+      }
+      @include sm-devices {
+        font-size: 20px;
+        padding: 0 0 17px 13px;
+        margin: 0 0 15px 0;
+        max-width: 100%;
+      }
+      &.transparent {
+        background: transparent;
+        border: 2px solid $bg-btn;
+        border-left: transparent;
+        transition: 0.2s ease;
+        @include md-devices {
+          border-left: 2px solid $bg-btn;
+        }
+        @include sm-devices {
+          border-left: 2px solid $bg-btn;
+        }
+        &:hover {
+          @media (min-width: 992px) {
+            background: $bg-btn;
+            transition: 0.2s ease;
+          }
+        }
+      }
+      &:last-of-type {
+        margin: 0;
+      }
+    }
+  }
+  &-canvas {
+    display: block;
+    position: relative;
+    height: 320px;
+    width: 100%;
+    background: $bg-main-color;
+
+    @include lg-devices {
+      height: 174px;
+    }
+    @include md-devices {
+      display: none;
+    }
+    @include sm-devices {
+      display: none;
+    }
+    .mouse {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 34px;
+      cursor: pointer;
+      z-index: 1;
+      img {
+        max-width: 100%;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    canvas {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      cursor: pointer;
+    }
+  }
+}

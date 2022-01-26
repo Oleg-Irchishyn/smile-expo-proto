@@ -1,0 +1,57 @@
+@import "./../components/our-team/top-managers";
+@import "./../components/our-team/managers.scss";
+
+.our-team {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0 100px 0;
+    width: 100%;
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -20px;
+        width: 633px;
+        height: 981px;
+        background: url("../../images/our-team/our-team-bg-xxl.png") no-repeat center;
+        background-size: cover;
+        z-index: -1;
+        pointer-events: none;
+        @include lg-devices {
+            background: url("../../images/our-team/our-team-bg-lg.png") no-repeat center;
+            width: 539px;
+            height: 975px;
+            background-size: cover;
+        }
+        @include md-devices {
+            display: none;
+        }
+        @include sm-devices {
+            display: none;
+        }
+    }
+    @include xl-devices {
+        padding: 50px 0 70px 0;
+    }
+    @include lg-devices {
+        padding: 50px 0 78px 0;
+    }
+    @include md-devices {
+        padding: 30px 0 21px 0;
+    }
+    @include sm-devices {
+        padding: 15px 0 36px 0;
+    }
+    .section-title {
+        h1 {
+            @include lg-devices {
+                margin: 0 0 50px 0;
+            }
+            @include sm-devices {
+                margin: 0 0 15px 0;
+            }
+        }
+    }
+}

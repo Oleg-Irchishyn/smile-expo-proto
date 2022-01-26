@@ -1,0 +1,245 @@
+.hero-screen {
+    position: relative;
+    width: 100%;
+    @include xxl-devices {
+        min-height: 1080px;
+        background: url("../../../images/about-company/hero-screen-bg-xxl.png") no-repeat;
+        background-position: 0 80px;
+        background-size: cover;
+    }
+    @include xl-devices {
+        min-height: 829px;
+        background: url("../../../images/about-company/hero-screen-bg-xl.png") no-repeat;
+        background-position: 0 80px;
+        background-size: cover;
+    }
+    @include lg-devices {
+        min-height: 593px;
+        background: url("../../../images/about-company/hero-screen-bg-lg.png") no-repeat;
+        background-position: 0 60px;
+        background-size: cover;
+    }
+    @include md-devices {
+        min-height: 593px;
+        background: url("../../../images/about-company/hero-screen-bg-lg.png") no-repeat;
+        background-position: 0 60px;
+        background-size: cover;
+    }
+    @include sm-devices {
+        min-height: 466px;
+        background: url("../../../images/about-company/hero-screen-bg-lg.png") no-repeat;
+        background-position: 0 60px;
+        background-size: cover;
+    }
+    @media (max-width: 550px) {
+        min-height: 466px;
+        background: url("../../../images/about-company/hero-screen-bg-lg.png") no-repeat;
+        background-position: -460px 0px;
+        background-size: cover;
+    }
+    &-content {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        @include xxl-devices {
+            width: calc((100vw - 1292px) / 2 + 1292px);
+            margin-left: calc((100vw - 1560px) / 2);
+            margin-top: 210px;
+            max-width: 1292px;
+        }
+        @include xl-devices {
+            width: calc((100vw - 1135px) / 2 + 1135px);
+            margin-left: calc((100vw - 1170px) / 2);
+            margin-top: 210px;
+            max-width: 1135px;
+        }
+        @include lg-devices {
+            width: calc((100vw - 892px) / 2 + 892px);
+            margin-left: calc((100vw - 960px) / 2);
+            margin-top: 98px;
+            padding-bottom: 76px;
+            max-width: 892px;
+        }
+        @include md-devices {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            width: calc((100vw - 740px) / 2 + 740px);
+            margin-left: calc((100vw - 740px) / 2);
+            margin-top: 72px;
+            max-width: 740px;
+        }
+        @include sm-devices {
+            flex-wrap: nowrap;
+            flex-direction: column;
+            width: calc((100vw - 290px) / 2 + 290px);
+            margin-left: calc((100vw - 290px) / 2);
+            margin-top: 15px;
+            max-width: 290px;
+        }
+    }
+
+    .mouse {
+        display: block;
+        width: 20px;
+        height: 34px;
+        z-index: 1;
+        margin: 215px auto 0 auto;
+        cursor: pointer;
+        @include xl-devices {
+            margin: 43px auto 0 auto;
+        }
+        @include lg-devices {
+            position: absolute;
+            left: 50%;
+            bottom: -17px;
+            transform: translate(-50%, 0%);
+        }
+        @include md-devices {
+            display: none;
+        }
+        @include sm-devices {
+            display: none;
+        }
+        img {
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+.hero-screen-content {
+    .infoblock {
+        width: 100%;
+        max-width: 803px;
+        margin: 0 auto 0 0;
+        @include lg-devices {
+            max-width: 630px;
+        }
+        @include md-devices {
+            max-width: 100%;
+        }
+        @include sm-devices {
+            max-width: 100%;
+        }
+        .title {
+            font-family: $font-main;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 47px;
+            text-align: left;
+            color: $bg-btn;
+            margin: 0 0 30px 0;
+            @include xxl-devices {
+                font-size: 60px;
+                line-height: 71px;
+            }
+            @include xl-devices {
+                font-size: 60px;
+                line-height: 71px;
+            }
+            @include md-devices {
+                margin: 0 0 35px 0;
+            }
+            @include sm-devices {
+                margin: 0 0 20px 0;
+            }
+        }
+        .descr {
+            font-family: $font-secondary;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 31px;
+            color: $color-white;
+            text-align: left;
+            margin: 0;
+            @include sm-devices {
+                font-size: 18px;
+                line-height: 23px;
+            }
+        }
+    }
+    .video {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        max-width: 235px;
+        width: 100%;
+        @include md-devices {
+            z-index: 10;
+            margin: 0 auto;
+            top: 194px;
+        }
+        @include sm-devices {
+            z-index: 10;
+            margin: 0 auto;
+            top: 194px;
+        }
+
+        .iframe-wrapper {
+            position: relative;
+            width: 100%;
+            border: 1px solid $color-white;
+            margin: 0 0 25px 0;
+            padding: 0 0 99.2% 0;
+            .play {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+                img {
+                    width: 22px;
+                    height: 22px;
+                    object-fit: contain;
+                    cursor: pointer;
+                }
+            }
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+            &.transparent {
+                iframe {
+                    opacity: 0;
+                    pointer-events: none;
+                }
+            }
+        }
+        &-descr {
+            max-width: 100%;
+            strong {
+                display: block;
+                font-family: $font-secondary;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 26px;
+                color: $color-white;
+                width: 100%;
+                margin: 0;
+            }
+            span {
+                display: block;
+                font-family: $font-secondary;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 26px;
+                color: $color-placeholder;
+                width: 100%;
+                margin: 0;
+            }
+        }
+    }
+}

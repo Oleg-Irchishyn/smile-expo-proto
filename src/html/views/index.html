@@ -1,0 +1,16 @@
+<%= _.template(require('./../includes/common/head.html').default)(data) %>
+
+<body>
+  <%= _.template(require('./../includes/common/header.html').default)(data) %>
+  <%= _.template(require('./../includes/common/breadcrumbs.html').default)(data) %>
+  <%= _.template(require('./../includes/main/about-company.html').default)(data) %>
+  <%= _.template(require('./../includes/main/achievements.html').default)(data) %>
+  <%= _.template(require('./../includes/main/our-events.html').default)(data) %>
+  <%= _.template(require('./../includes/main/partners.html').default)(data) %>
+  <%= _.template(require('./../includes/main/media.html').default)(data) %>
+  <%= _.template(require('./../includes/common/footer.html').default)(data) %>
+  <%= _.template(require('./../includes/popups/faq.html').default)(data) %>
+  <%= _.template(require('./../includes/popups/subscribe.html').default)(data) %>
+  <%= _.template(require('./../includes/popups/success.html').default)(data) %>
+  <%= _.template(require('./../includes/main/page-end.html').default)(data) %>
+</body>

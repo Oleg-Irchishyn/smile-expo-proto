@@ -1,0 +1,65 @@
+@import "./../components/contacts/contacts-countries";
+@import "./../components/contacts/contacts-questions";
+
+.contacts {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0 122px 0;
+    width: 100%;
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        @include md-devices {
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+        @include sm-devices {
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+    }
+    @include xl-devices {
+        padding: 50px 0 100px 0;
+    }
+    @include lg-devices {
+        padding: 50px 0 125px 0;
+    }
+    @include md-devices {
+        padding: 50px 0 124px 0;
+    }
+    @include sm-devices {
+        padding: 15px 0 77px 0;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -20px;
+        width: 633px;
+        height: 836px;
+        background: url("../../images/contacts/contacts-bg-xxl.png") no-repeat center;
+        background-size: cover;
+        z-index: -1;
+        pointer-events: none;
+        @include xl-devices {
+            background: url("../../images/contacts/contacts-bg-xl.png") no-repeat center;
+            width: 633px;
+            height: 975px;
+            background-size: cover;
+        }
+        @include lg-devices {
+            background: url("../../images/contacts/contacts-bg-lg.png") no-repeat center;
+            width: 539px;
+            height: 975px;
+            background-size: cover;
+        }
+        @include md-devices {
+            display: none;
+        }
+        @include sm-devices {
+            display: none;
+        }
+    }
+}

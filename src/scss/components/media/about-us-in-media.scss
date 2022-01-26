@@ -1,0 +1,285 @@
+.about-us-in-media {
+    position: relative;
+    width: 100%;
+    &__list-wrapper {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        margin: 0 auto 20px auto;
+        @include xxl-devices {
+            max-width: 1590px;
+        }
+        @include xl-devices {
+            max-width: 1200px;
+            margin-bottom: 20px;
+        }
+        @include lg-devices {
+            max-width: 990px;
+            margin-bottom: 0px;
+        }
+        @include md-devices {
+            margin: 0;
+        }
+        @include sm-devices {
+            margin: 0 0 15px 0;
+        }
+        &.unslicked {
+            @include xxl-devices {
+                max-width: 1560px;
+            }
+            @include xl-devices {
+                max-width: 1170px;
+            }
+            @include lg-devices {
+                max-width: 960px;
+            }
+        }
+    }
+    &__list {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: flex-start;
+        width: 100%;
+        .slick-list {
+            width: 100%;
+            div {
+                position: relative;
+            }
+            @include xxl-devices {
+                width: calc((100vw - 1590px) / 2 + 1590px);
+                padding-right: 0 !important;
+                margin-left: 0;
+            }
+            @include xl-devices {
+                width: calc((100vw - 1200px) / 2 + 1200px);
+                padding-right: 0 !important;
+                margin-left: 0;
+            }
+            @include lg-devices {
+                width: calc((100vw - 990px) / 2 + 990px);
+                padding-right: 0 !important;
+                margin-left: 0;
+            }
+          
+            @include md-devices {
+                width: calc((100vw - 770px) / 2 + 770px);
+                padding-right: calc((100vw - 216.5px) / 2) !important;
+                margin-left: calc((100vw - 770px) / 2);
+            }
+            @include sm-devices {
+                width: calc((100vw - 320px) / 2 + 320px);
+                padding-right: calc((100vw - 320px) / 2) !important;
+                margin-left: calc((100vw - 320px) / 2);
+                height: calc((100vw - 320px) / 2 + 320px);
+            }
+        }
+        .slick-slide {
+            @include xxl-devices {
+                margin: 0 15px;
+            }
+            @include xl-devices {
+                margin: 0 15px;
+            }
+            @include lg-devices {
+                margin: 0 15px;
+            }
+            @include md-devices {
+                margin: 0 15px;
+            }
+            @include sm-devices {
+                margin: 15px;
+            }
+        }
+
+        .item {
+            position: relative;
+            display: flex !important;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            background: transparent;
+            margin: 0 0 30px 0;
+            @include sm-devices {
+                margin: 0;
+            }
+            &-video {
+                position: relative;
+                display: block;
+                width: 100%;
+                padding-bottom: 56%;
+                margin: 0 0 25px 0;
+                cursor: pointer;
+                @include xl-devices {
+                    padding-bottom: 49.2%;
+                    margin: 0 0 60px 0;
+                }
+                @include lg-devices {
+                    margin: 0 0 15px 0;
+                }
+                @include md-devices {
+                    padding-bottom: 56.3%;
+                    margin: 0 0 15px 0;
+                }
+                @include sm-devices {
+                    padding-bottom: 56.3%;
+                    margin: 0 0 15px 0;
+                }
+                iframe {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                }
+                .placeholder {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: 2;
+                    &-bg {
+                        width: 100%;
+                        height: 100%;
+                        max-width: 100%;
+                    }
+                    .play {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        width: 118px;
+                        height: 118px;
+                        border: 1px solid $color-white;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        img {
+                            width: 100%;
+                            max-width: 19px;
+                            height: 22px;
+                            object-fit: cover;
+                        }
+                        @include lg-devices {
+                            width: 110px;
+                            height: 110px;
+                            img {
+                                max-width: 18px;
+                                height: 20px;
+                            }
+                        }
+                        @include md-devices {
+                            width: 110px;
+                            height: 110px;
+                            img {
+                                max-width: 18px;
+                                height: 20px;
+                            }
+                        }
+                        @include sm-devices {
+                            width: 68px;
+                            height: 68px;
+                            img {
+                                max-width: 12px;
+                                height: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+            &-content {
+                width: 100%;
+                flex: 1;
+                .title {
+                    font-family: $font-secondary;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: $color-placeholder;
+                    text-align: left;
+                    width: 100%;
+                    margin: 0 0 10px 0;
+                    @include lg-devices {
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                    @include md-devices {
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                    @include sm-devices {
+                        font-size: 14px;
+                        line-height: 18px;
+                    }
+                }
+                .descr {
+                    font-family: $font-secondary;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 31px;
+                    color: $color-white;
+                    text-align: left;
+                    width: 100%;
+                    margin: 0;
+                    @include lg-devices {
+                        font-size: 20px;
+                        line-height: 26px;
+                    }
+                    @include md-devices {
+                        font-size: 20px;
+                        line-height: 26px;
+                    }
+                    @include sm-devices {
+                        font-size: 18px;
+                        line-height: 23px;
+                    }
+                }
+            }
+            &.unslicked-item {
+                max-width: 500px;
+                width: 100%;
+                margin: 0 30px 30px 0;
+
+                @include xxl-devices {
+                    max-width: 500px;
+                    &:nth-of-type(3n) {
+                        margin: 0 0 30px 0;
+                    }
+                }
+                @include xl-devices {
+                    max-width: 570px;
+                    &:nth-of-type(2n) {
+                        margin: 0 0 30px 0;
+                    }
+                }
+                @include lg-devices {
+                    max-width: 465px;
+                    &:nth-of-type(2n) {
+                        margin: 0 0 30px 0;
+                    }
+                }
+                @include md-devices {
+                    max-width: 355px;
+                    margin-left: calc((100vw - 740px) / 2);
+                    &:nth-of-type(2n) {
+                        margin: 0 0 30px 0;
+                    }
+                }
+                @include sm-devices {
+                    max-width: 290px;
+                    margin-left: calc((100vw - 290px) / 2);
+                    margin-top: 15px;
+                    margin-bottom: 15px;
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

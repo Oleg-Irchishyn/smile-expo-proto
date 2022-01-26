@@ -1,0 +1,46 @@
+// VARIABLES AND MIXINS
+
+$font-stack: "Jura", "IBM Plex Sans", sans-serif;
+$font-main: "Jura", sans-serif;
+$font-secondary: "IBM Plex Sans", sans-serif;
+$bg-main-color: #040928;
+$bg-btn: #ee7829;
+$bg-dropdown: #0e1333;
+$color-white: #fff;
+$color-placeholder: #8E94BB;
+
+@mixin xs-devices {
+    @media (max-width: 575px) {
+        @content;
+    }
+}
+@mixin sm-devices {
+    @media (max-width: 767px) {
+        @content;
+    }
+}
+@mixin md-devices {
+    @media (min-width: 768px) and (max-width: 991px) {
+        @content;
+    }
+}
+@mixin lg-devices {
+    @media (min-width: 992px) and (max-width: 1199px) {
+        @content;
+    }
+}
+@mixin xl-devices {
+    @media (min-width: 1200px) and (max-width: 1919px) {
+        @content;
+    }
+}
+@mixin xxl-devices {
+    @media screen and (min-width: 1920px) {
+        @content;
+    }
+}
+@mixin landscape-orientation {
+    @media (max-width: 991px) and (orientation: landscape) {
+        @content;
+    }
+}

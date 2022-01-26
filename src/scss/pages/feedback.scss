@@ -1,0 +1,34 @@
+@import "./../components/feedback/feedback-list";
+
+.feedback {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0 117px 0;
+    width: 100%;
+    @include xl-devices {
+        padding: 50px 0 100px 0;
+    }
+    @include lg-devices {
+        padding: 50px 0 110px 0;
+    }
+    @include md-devices {
+        padding: 50px 0 60px 0;
+    }
+    @include sm-devices {
+        padding: 50px 0 34px 0;
+    }
+    .section-title {
+        h1 {
+            @include lg-devices {
+                margin: 0 0 50px 0;
+            }
+            @include md-devices {
+                margin: 0 0 50px 0;
+            }
+            @include sm-devices {
+                margin: 0 0 50px 0;
+            }
+        }
+    }
+}

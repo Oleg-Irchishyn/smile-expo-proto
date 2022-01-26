@@ -1,0 +1,178 @@
+.become-partner-form__wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.become-partner-form {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 896px;
+    @include xl-devices {
+        max-width: 966px;
+    }
+    @include lg-devices {
+        max-width: 943px;
+    }
+    @include md-devices {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+    @include sm-devices {
+        flex-wrap: nowrap;
+        flex-direction: column;
+    }
+
+    .form-group {
+        width: 100%;
+        max-width: 367px;
+        margin: 0 0 45px 0;
+        &:nth-of-type(2n):not(.checkbox) {
+            @include xxl-devices {
+                margin-left: 162px;
+            }
+            @include xl-devices {
+                margin-left: 232px;
+            }
+            @include lg-devices {
+                margin-left: 209px;
+            }
+        }
+        .form-control {
+            width: 100%;
+            max-width: 100%;
+            font-family: $font-secondary;
+            font-size: 20px;
+            font-weight: 400;
+            color: $bg-btn;
+            height: auto;
+            padding: 0px 10px 0 0;
+            border-radius: 0;
+            border: none;
+            background: none;
+            border-bottom: 2px solid $color-white;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            min-height: 40px;
+            text-align: left;
+            @include sm-devices {
+                font-size: 18px;
+                line-height: normal;
+            }
+            &::placeholder {
+                color: $color-placeholder;
+                font-weight: 400;
+                opacity: 1;
+            }
+            &:focus {
+                outline: none;
+                color: $bg-btn;
+                box-shadow: none;
+                &::placeholder {
+                    opacity: 0;
+                }
+            }
+        }
+
+        &.checkbox {
+            position: relative;
+            text-align: left;
+            max-width: 100%;
+            margin: 5px 0 50px 0;
+            input[type="checkbox"] {
+                display: none;
+            }
+            input[type="checkbox"] + label {
+                position: relative;
+                font-family: $font-secondary;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 18px;
+                text-align: left;
+                color: $color-placeholder;
+                padding: 0 0 0 37px;
+                margin: 0;
+                max-width: 338px;
+                width: 100%;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 20px;
+                    height: 20px;
+                    border: 2px solid $color-white;
+                    cursor: pointer;
+                }
+                a {
+                    color: inherit;
+                    text-decoration: underline;
+                }
+            }
+            input[type="checkbox"]:checked + label {
+                &::before {
+                    content: "\2713";
+                    font-size: 14px;
+                    font-weight: 700;
+                    color: $bg-btn;
+                    text-align: center;
+                }
+            }
+        }
+        .help-block {
+            display: none;
+        }
+        &.has-error {
+            .help-block {
+                display: block;
+                margin: 0;
+                text-align: left;
+                font-family: $font-secondary;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: normal;
+                color: red;
+            }
+            .form-control {
+                border-bottom: 2px solid red;
+            }
+        }
+    }
+    .btn {
+        background: transparent;
+        border: 2px solid $bg-btn;
+        width: 100%;
+        max-width: 367px;
+        min-height: 80px;
+        font-size: 24px;
+        padding: 0 0 15px 15px;
+        transition: 0.2s ease;
+        text-transform: lowercase;
+        &:hover {
+            @media (min-width: 992px) {
+                background: $bg-btn;
+                border: 2px solid transparent;
+                transition: 0.2s ease;
+            }
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            right: calc(0% + 15px);
+            top: calc(0% + 15px);
+            width: 13px;
+            height: 13px;
+            background: url("../../../images/icons/btn-arrow-right.svg") no-repeat center;
+            background-size: cover;
+        }
+        @include sm-devices {
+            font-size: 20px;
+            max-width: 100%;
+        }
+    }
+}

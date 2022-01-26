@@ -1,0 +1,22 @@
+@import "./../components/registration/registration-iframe";
+@import "./../components/registration/our-recent-events";
+
+.registration {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 50px 0 166px 0;
+    @include xl-devices {
+        padding: 50px 0 100px 0;
+    }
+    @include lg-devices {
+        padding: 70px 0 100px 0;
+    }
+    @include md-devices {
+        padding: 70px 0 64px 0;
+    }
+    @include sm-devices {
+        padding: 15px 0 47px 0;
+    }
+}

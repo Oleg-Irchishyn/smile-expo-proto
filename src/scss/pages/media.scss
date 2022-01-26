@@ -1,0 +1,35 @@
+@import "./../components/media/about-us-in-media";
+@import "./../components/media/events-news";
+    
+.all-media {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 50px 0 192px 0;
+        width: 100%;
+        @include xl-devices {
+            padding: 50px 0 88px 0;
+        }
+        @include lg-devices {
+            padding: 30px 0 77px 0;
+        }
+        @include md-devices {
+            padding: 30px 0 48px 0;
+        }
+        @include sm-devices {
+            padding: 15px 0 50px 0;
+        }
+        &::before,
+        &::after {
+            display: none;
+        }
+        .section-title {
+            h1 {
+                @include sm-devices {
+                    max-width: 60%;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+

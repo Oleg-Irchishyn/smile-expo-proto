@@ -1,0 +1,63 @@
+.error-page-content {
+    width: 100%;
+    position: relative;
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .subtitle {
+            font-family: $font-secondary;
+            font-weight: 400;
+            font-size: 24px;
+            line-height: 31px;
+            color: $color-white;
+            text-align: left;
+            margin: 0 0 30px 0;
+        }
+        .btn {
+            background: transparent;
+            border: 2px solid $bg-btn;
+            width: 100%;
+            max-width: 366px;
+            min-height: 80px;
+            font-size: 24px;
+            padding: 0 0 15px 15px;
+            margin: 0 0 30px 0;
+            transition: 0.2s ease;
+            text-transform: lowercase;
+            color: $color-white;
+            &:last-of-type {
+                margin: 0;
+            }
+            &:hover {
+                @media (min-width: 992px) {
+                    background: $bg-btn;
+                    border: 2px solid transparent;
+                    transition: 0.2s ease;
+                    color: $color-white;
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                right: calc(0% + 15px);
+                top: calc(0% + 15px);
+                width: 13px;
+                height: 13px;
+                background: url("../../../images/icons/btn-arrow-right.svg") no-repeat center;
+                background-size: cover;
+            }
+            @include md-devices {
+                font-size: 20px;
+                padding: 0 0 19px 15px;
+            }
+            @include sm-devices {
+                font-size: 20px;
+                max-width: 100%;
+                padding: 0 0 19px 15px;
+            }
+        }
+    }
+}

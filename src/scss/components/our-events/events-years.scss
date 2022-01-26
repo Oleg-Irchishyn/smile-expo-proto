@@ -1,0 +1,167 @@
+.events-years {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    height: 80px;
+    box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+    @include xxl-devices {
+        max-width: 765px;
+        margin-left: auto;
+    }
+    
+    @include sm-devices {
+        height: auto;
+        border: none;
+        max-width: 290px;
+        margin: 0 auto;
+    }
+
+    &-list {
+        display: flex !important;
+        max-width: 100%;
+        @include xxl-devices {
+            max-width: calc(100% - 198px);
+            width: 100%;
+        }
+        @include xl-devices {
+            max-width: calc(100% - 206px);
+            width: 100%;
+        }
+        @include lg-devices {
+            max-width: calc(100% - 150px);
+            width: 100%;
+        }
+        @include md-devices {
+            max-width: calc(100% - 128px);
+            width: 100%;
+        }
+        @include sm-devices {
+            height: 62px;
+            margin: 0 0 20px 0;
+        }
+        .slick-list {
+            display: flex !important;
+            width: 100%;
+            padding: 4px;
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 4px;
+                top: 4px;
+                width: calc(100% - 4px);
+                height: calc(100% - 4px);
+                border: 4px solid $bg-btn;
+                z-index: -1;
+                pointer-events: none;
+            }
+            div {
+                display: flex !important;
+                width: 100%;
+            }
+        }
+        .slick-track {
+            width: 100%;
+            padding-bottom: 4px;
+            padding-top: 4px;
+        }
+        .item {
+            position: relative;
+            display: flex !important;
+            align-items: center;
+            justify-content: center;
+            font-family: $font-main;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: normal;
+            color: $bg-btn;
+            @include lg-devices {
+                font-size: 36px;
+            }
+            @include md-devices {
+                font-size: 36px;
+            }
+            @include sm-devices {
+                font-size: 24px;
+            }
+            &.active {
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: -4px;
+                    width: calc(100% + 4px);
+                    height: calc(100% + 12px);
+                    border: 4px solid $color-white;
+                    z-index: 5;
+                    pointer-events: none;
+                }
+            }
+        }
+        .slick-current {
+            position: relative;
+        }
+    }
+    &-list-arrows {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: flex-end;
+        width: 100%;
+        max-width: 100%;
+        flex: 1;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 4px;
+            width: 100%;
+            height: calc(100% - 4px);
+            border-top: 4px solid $bg-btn;
+            border-right: 4px solid $bg-btn;
+            border-bottom: 4px solid $bg-btn;
+            z-index: 5;
+            pointer-events: none;
+            @include sm-devices {
+                display: none;
+            }
+        }
+        @include xxl-devices {
+            padding: 0 32px 0 0;
+        }
+        @include xl-devices {
+            padding: 0 42px 0 0;
+        }
+        @include lg-devices {
+            padding: 0 32px 0 0;
+        }
+        @include md-devices {
+            padding: 0 29px 0 0;
+        }
+        @include sm-devices {
+            justify-content: center;
+        }
+        .events-years-list-prev-arrow,
+        .events-years-list-next-arrow {
+            max-width: 16px;
+            width: 100%;
+            height: 16px;
+            cursor: pointer;
+            img {
+                height: 100%;
+                width: 100%;
+                max-width: 100%;
+            }
+            &.slick-disabled {
+                opacity: 0.7;
+            }
+        }
+        .events-years-list-prev-arrow {
+            margin: 0 30px 0 0;
+        }
+    }
+}

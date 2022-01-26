@@ -1,0 +1,195 @@
+.history-numbers {
+    position: relative;
+    width: 100%;
+    padding: 103px 0 130px 0;
+    .section-title {
+        z-index: 2;
+        @include md-devices {
+            margin: 0 0 50px 0;
+        }
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: calc((100vw - 1560px) / 2);
+        top: 0;
+        background: url("../../../images/about-company/history-numbers-bg-xxl.png") no-repeat center;
+        background-size: cover;
+        width: 1029px;
+        height: 519px;
+        pointer-events: none;
+        z-index: -1;
+        @include xl-devices {
+            background: url("../../../images/about-company/history-numbers-bg-xl.png") no-repeat center;
+            top: calc(0% + 268px);
+            right: 0;
+            width: 927px;
+            height: 519px;
+        }
+        @include lg-devices {
+            background: url("../../../images/about-company/history-numbers-bg-lg.png") no-repeat center;
+            top: calc(0% + 234px);
+            right: 0;
+            width: 542px;
+            height: 309px;
+        }
+        @include md-devices {
+            background: url("../../../images/about-company/history-numbers-bg-md.png") no-repeat center;
+            top: calc(0% + 217px);
+            right: 0;
+            width: 512px;
+            height: 261px;
+        }
+        @include sm-devices {
+            display: none;
+        }
+    }
+    @include xl-devices {
+        padding: 80px 0 80px 0;
+    }
+    @include lg-devices {
+        padding: 50px 0 50px 0;
+    }
+    @include md-devices {
+        padding: 50px 0 50px 0;
+    }
+    @include sm-devices {
+        padding: 50px 0 50px 0;
+    }
+    &-slider__wrapper {
+        position: relative;
+        overflow-x: hidden;
+        z-index: 2;
+        @include xxl-devices {
+            max-width: 1560px;
+            margin: 0 auto;
+        }
+        @include sm-devices {
+            max-width: 290px;
+            margin: 0 auto;
+        }
+    }
+    &-slider {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: flex-start;
+        .slick-list {
+            display: flex !important;
+
+            div {
+                display: flex !important;
+                align-items: stretch;
+                height: 100%;
+            }
+            @include xxl-devices {
+                padding: 0 !important;
+                margin: 0;
+            }
+            @include xl-devices {
+                width: calc((100vw - 1200px) / 2 + 1200px);
+                padding-right: calc((100vw - 1200px) / 2) !important;
+                margin-left: calc((100vw - 1200px) / 2);
+            }
+            @include lg-devices {
+                width: calc((100vw - 990px) / 2 + 990px);
+                padding-right: calc((100vw - 990px) / 2) !important;
+                margin-left: calc((100vw - 990px) / 2);
+            }
+            @include md-devices {
+                width: calc((100vw - 770px) / 2 + 770px);
+                padding-right: calc((100vw - 510px) / 2) !important;
+                margin-left: calc((100vw - 770px) / 2);
+            }
+            @include sm-devices {
+                padding: 0 !important;
+                margin: 0;
+            }
+        }
+        .slick-slide {
+            @include xxl-devices {
+                margin: 0;
+            }
+            @include xl-devices {
+                margin: 0 17px;
+            }
+            @include lg-devices {
+                margin: 0 15px;
+            }
+            @include md-devices {
+                margin: 0 15px;
+            }
+            @include sm-devices {
+                margin: 0;
+            }
+        }
+    }
+    &-slider__value {
+        position: relative;
+        display: flex !important;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
+        max-width: 100%;
+        background: url("../../../images/main/achievements-value-bg.png") no-repeat center;
+        background-size: cover;
+        .number {
+            font-family: $font-main;
+            font-weight: 700;
+            font-size: 40px;
+            line-height: 47px;
+            color: $bg-btn;
+            text-align: left;
+            margin: 0 0 10px 0;
+            @include sm-devices {
+                font-size: 24px;
+                line-height: 28px;
+            }
+        }
+        .descr {
+            font-family: $font-secondary;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 23px;
+            color: $color-placeholder;
+            text-align: left;
+            margin: 0;
+            max-width: 90%;
+            @include xxl-devices {
+                font-size: 20px;
+                line-height: 24px;
+            }
+            @include xl-devices {
+                font-size: 20px;
+                line-height: 24px;
+            }
+        }
+        @include xxl-devices {
+            max-width: 23.5%;
+            margin: 0 auto 0 0;
+            padding: 32px 37px 32px 37px;
+            &:last-of-type {
+                margin: 0;
+            }
+        }
+        @include xl-devices {
+            padding: 32px 37px 32px 37px;
+        }
+        @include lg-devices {
+            padding: 26px 26px 26px 26px;
+        }
+        @include md-devices {
+            padding: 26px 26px 26px 26px;
+        }
+        @include sm-devices {
+            padding: 31px 26px 31px 26px;
+            margin: 0 0 15px 0;
+            &:last-of-type {
+                margin: 0;
+            }
+        }
+    }
+}

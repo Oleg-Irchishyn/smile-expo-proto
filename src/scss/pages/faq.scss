@@ -1,0 +1,56 @@
+@import "./../components/faq/faq-list";
+@import "./../components/faq/faq-questions";
+
+.faq {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    padding: 50px 0 120px 0;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            right: 0;
+            top: -20px;
+            width: 633px;
+            height: 977px;
+            background: url("../../images/faq/faq-bg-xxl.png") no-repeat center;
+            background-size: cover;
+            z-index: -1;
+            pointer-events: none;
+            @include lg-devices {
+                height: 975px;
+                background-size: cover;
+            }
+            @include md-devices {
+                display: none;
+            }
+            @include sm-devices {
+                display: none;
+            }
+        }
+    
+    @include xl-devices {
+        padding: 50px 0 100px 0;
+    }
+    @include lg-devices {
+        padding: 50px 0 125px 0;
+    }
+    @include md-devices {
+        padding: 50px 0 94px 0;
+    }
+    @include sm-devices {
+        padding: 50px 0 46px 0;
+    }
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        width: 100%;
+        @include md-devices {
+            flex-direction: column;
+            flex-wrap: nowrap;
+        }
+    }
+}

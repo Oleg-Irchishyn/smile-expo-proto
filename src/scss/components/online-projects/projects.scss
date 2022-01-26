@@ -1,0 +1,239 @@
+.online-projects {
+    position: relative;
+    width: 100%;
+    @include xxl-devices {
+        padding: 50px 0 100px 0;
+    }
+    @include xl-devices {
+        padding: 50px 0 79px 0;
+    }
+    @include lg-devices {
+        padding: 50px 0 42px 0;
+    }
+    @include md-devices {
+        padding: 50px 0 71px 0;
+    }
+    @include sm-devices {
+        padding: 15px 0 51px 0;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -20px;
+        width: 633px;
+        height: 973px;
+        background: url("../../../images/online-projects/online-project-bg-xxl.png") no-repeat center;
+        background-size: 100% 100%;
+        z-index: -1;
+        pointer-events: none;
+        @include xl-devices {
+            background: url("../../../images/online-projects/online-project-bg-xl.png") no-repeat center;
+            width: 633px;
+            height: 960px;
+            background-size: 100% 100%;
+        }
+        @include lg-devices {
+            background: url("../../../images/online-projects/online-project-bg-lg.png") no-repeat center;
+            width: 539px;
+            height: 975px;
+            background-size: 100% 100%;
+        }
+        @include md-devices {
+            display: none;
+        }
+        @include sm-devices {
+            display: none;
+        }
+    }
+    &-list {
+        width: 100%;
+        .container {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: flex-start;
+            @include md-devices {
+                flex-wrap: nowrap;
+                flex-direction: column;
+            }
+            @include sm-devices {
+                flex-wrap: nowrap;
+                flex-direction: column;
+            }
+        }
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            text-decoration: none;
+            color: $bg-btn;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 0 30px 0;
+            @include xxl-devices {
+                max-width: 638px;
+                &:nth-of-type(2n) {
+                    margin: 0 0 0 auto;
+                }
+            }
+            @include xl-devices {
+                max-width: 570px;
+                &:nth-of-type(2n) {
+                    margin: 0 0 0 auto;
+                }
+            }
+            @include lg-devices {
+                max-width: 462px;
+                &:nth-of-type(2n) {
+                    margin: 0 0 0 auto;
+                }
+            }
+            @include md-devices {
+                &:last-of-type {
+                    margin: 0;
+                }
+            }
+            @include sm-devices {
+                &:last-of-type {
+                    margin: 0;
+                }
+            }
+            &-header {
+                display: flex;
+                flex-wrap: wrap;
+                max-width: 366px;
+                width: 100%;
+                height: 285px;
+                @include md-devices {
+                    height: 573px;
+                    max-width: 100%;
+                }
+                @include sm-devices {
+                    height: 225px;
+                    max-width: 100%;
+                }
+
+                div {
+                    flex: 1;
+                    position: relative;
+                    img {
+                        max-width: 100%;
+                        width: 100% !important;
+                        height: 100% !important;
+                        object-fit: cover;
+                    }
+                }
+            }
+            &-body {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 20px 0 50px 0;
+                flex: 1;
+                width: 100%;
+                @include lg-devices {
+                    padding: 20px 0 30px 0;
+                }
+                @include md-devices {
+                    padding: 30px 0 30px 0;
+                }
+                @include sm-devices {
+                    padding: 15px 0 15px 0;
+                }
+                .title {
+                    font-family: $font-main;
+                    font-weight: 700;
+                    font-size: 30px;
+                    line-height: 35px;
+                    color: $bg-btn;
+                    text-align: left;
+                    margin: 0 0 10px 0;
+                }
+                .subtitle {
+                    font-family: $font-secondary;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 31px;
+                    color: $color-white;
+                    text-align: left;
+                    margin: 0 0 5px 0;
+                    @include sm-devices {
+                        font-size: 20px;
+                        line-height: 26px;
+                        margin: 0 0 10px 0;
+                    }
+                }
+                .text {
+                    font-family: $font-secondary;
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: $color-placeholder;
+                    text-align: left;
+                    margin: 0;
+                    @include sm-devices {
+                        font-size: 18px;
+                        line-height: 22px;
+                    }
+                }
+            }
+            &-footer {
+                position: relative;
+                width: 100%;
+                max-width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                align-items: flex-start;
+                .btn {
+                    background: transparent;
+                    border: 2px solid $bg-btn;
+                    width: 100%;
+                    max-width: 366px;
+                    min-height: 80px;
+                    font-size: 24px;
+                    padding: 0 0 15px 15px;
+                    transition: 0.2s ease;
+                    text-transform: lowercase;
+                    color: $color-white;
+                    &:hover {
+                        @media (min-width: 992px) {
+                            background: $bg-btn;
+                            border: 2px solid transparent;
+                            transition: 0.2s ease;
+                            color: $color-white;
+                        }
+                    }
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        right: calc(0% + 15px);
+                        top: calc(0% + 15px);
+                        width: 13px;
+                        height: 13px;
+                        background: url("../../../images/icons/btn-arrow-right.svg") no-repeat center;
+                        background-size: cover;
+                    }
+                    @include lg-devices {
+                        font-size: 20px;
+                        padding: 0 0 19px 15px;
+                    }
+                    @include md-devices {
+                        font-size: 20px;
+                        padding: 0 0 19px 15px;
+                    }
+                    @include sm-devices {
+                        font-size: 20px;
+                        max-width: 100%;
+                        padding: 0 0 19px 15px;
+                    }
+                }
+            }
+        }
+    }
+}

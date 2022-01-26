@@ -1,0 +1,100 @@
+@import "./../components/our-events/events-form";
+@import "./../components/our-events/events-years";
+@import "./../components/our-events/events-list";
+
+.our-total-events {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px 0 44px 0;
+    @include xxl-devices {
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: -45px;
+            background: url("../../images/our-events/events-search-results-bg-xxl.png") no-repeat center;
+            background-size: cover;
+            width: 633px;
+            height: 973px;
+            z-index: -1;
+            pointer-events: none;
+        }
+    }
+    @include xl-devices {
+        padding-bottom: 20px;
+        &::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: -45px;
+            background: url("../../images/our-events/events-search-results-bg-xxl.png") no-repeat center;
+            background-size: cover;
+            width: 633px;
+            height: 973px;
+            z-index: -1;
+            pointer-events: none;
+        }
+    }
+    @include lg-devices {
+        padding-bottom: 13px;
+        &::after {
+            content: "";
+            position: absolute;
+            right: 40px;
+            top: 90px;
+            background: url("../../images/our-events/events-search-results-bg-lg.png") no-repeat center;
+            background-size: cover;
+            width: 559px;
+            height: 860px;
+            z-index: -1;
+            pointer-events: none;
+        }
+    }
+    @include md-devices {
+        padding-bottom: 13px;
+    }
+    @include sm-devices {
+        flex-wrap: nowrap;
+        flex-direction: column;
+        padding: 15px 0 45px 0;
+    }
+
+    .events-search-results {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        width: 100%;
+        @include xxl-devices {
+            width: calc((100vw - 1160px) / 2 + 1160px);
+            margin-right: calc((100vw - 1580px) / 2);
+            max-width: 1160px;
+        }
+        @include xl-devices {
+            width: calc((100vw - 773px) / 2 + 773px);
+            margin-right: calc((100vw - 1170px) / 2);
+            max-width: 773px;
+        }
+        @include lg-devices {
+            width: calc((100vw - 637px) / 2 + 637px);
+            margin-right: calc((100vw - 960px) / 2);
+            max-width: 637px;
+        }
+        @include md-devices {
+            width: calc((100vw - 353px) / 2 + 353px);
+            margin-right: calc((100vw - 740px) / 2);
+            max-width: 353px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+        @include sm-devices {
+            width: calc((100vw - 290px) / 2 + 290px);
+            margin-left: calc((100vw - 290px) / 2);
+            max-width: 300px;
+        }
+    }
+}

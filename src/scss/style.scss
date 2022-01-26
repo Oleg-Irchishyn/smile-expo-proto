@@ -1,0 +1,37 @@
+// LIBS
+@import '~bootstrap-select/sass/bootstrap-select';
+@import '~bootstrap/scss/bootstrap';
+@import '../js/components/libs/slick-carousel/slick/slick.css';
+@import '../js/components/libs/OverlayScrollbars/OverlayScrollbars.min.css';
+
+
+
+// COMPONENTS
+@import './components/common/normalize';
+@import './components/common/variables';
+@import './components/common/header';
+@import './components/common/breadcrumbs';
+@import './components/common/pagination';
+@import './components/common/footer';
+@import './components/popups/faq';
+@import './components/popups/subscribe';
+@import './components/popups/success';
+
+// PAGES
+@import './pages/main';
+@import './pages/our-events';
+@import './pages/contacts';
+@import './pages/registration';
+@import './pages/faq';
+@import './pages/media';
+@import './pages/feedback';
+@import './pages/our-team';
+@import './pages/news';
+@import './pages/single-news';
+@import './pages/about-company';
+@import './pages/become-partner';
+@import './pages/our-partners';
+@import './pages/online-projects';
+@import './pages/404';
+@import './pages/vacancies';
+

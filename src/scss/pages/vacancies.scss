@@ -1,0 +1,47 @@
+@import "./../components/vacancies/vacancies";
+
+.vacancies {
+    position: relative;
+    width: 100%;
+    padding: 50px 0 148px 0;
+    @include xl-devices {
+        padding: 50px 0 138px 0;
+    }
+    @include lg-devices {
+        padding: 50px 0 106px 0;
+    }
+    @include md-devices {
+        padding: 30px 0 51px 0;
+    }
+    @include sm-devices {
+        padding: 15px 0 29px 0;
+    }
+    .section-title {
+        z-index: 2;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 0;
+        top: -20px;
+        width: 633px;
+        height: 577px;
+        background: url("../../images/vacancies/vacancies-bg-xxl.png") no-repeat center;
+        background-size: cover;
+        z-index: -1;
+        pointer-events: none;
+        @include lg-devices {
+            background: url("../../images/vacancies/vacancies-bg-lg.png") no-repeat center;
+            width: 539px;
+            height: 787px;
+            background-size: cover;
+        }
+        @include md-devices {
+            display: none;
+        }
+        @include sm-devices {
+            display: none;
+        }
+    }
+}

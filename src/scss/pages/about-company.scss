@@ -1,0 +1,15 @@
+@import "./../components/about-company/hero-screen";
+@import "./../components/about-company/key-areas";
+@import "./../components/about-company/history-numbers";
+@import "./../components/about-company/our-achievements";
+
+.about-company {
+    &.single-page {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
