@@ -6,7 +6,7 @@
     max-width: 100%;
     @include xxl-devices {
         width: calc((100vw - 761px) / 2 + 761px);
-        margin-right: calc((100vw - 1650px) / 2);
+        margin-right: auto;
         max-width: 761px;
     }
     @include xl-devices {
