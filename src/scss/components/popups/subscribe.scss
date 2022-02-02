@@ -82,6 +82,8 @@
                 align-items: flex-start;
                 justify-content: flex-start;
                 width: 100%;
+                max-width: 100%;
+                margin: 0 0 0 0;
                 &-caption {
                     font-family: $font-secondary;
                     font-weight: 400;

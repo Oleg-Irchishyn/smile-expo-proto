@@ -180,6 +180,6 @@ module.exports = {
             filename: 'css/bundle.css',
             chunkFilename: 'css/chunks/' + CSS_CHUNK_NAME,
         }),
-        new CriticalCssPlugin({ url: 'https://www.smileexpo.com.ua/' }),
+        new CriticalCssPlugin({ url: 'https://oleg-irchishyn.github.io/smile-expo-proto/web/' }),
     ].concat(htmlPlugins)
 };
