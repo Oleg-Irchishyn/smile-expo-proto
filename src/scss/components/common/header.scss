@@ -195,9 +195,17 @@
       }
       @include sm-devices {
         min-width: 320px;
+        width: 320px;
         padding: 15px 22px 15px 22px;
-        left: calc(0% - 15px);
+        transform: translate(-50%, 0%);
+        left: 50%;
+        position: fixed;
+        top: 60px;
+        overflow: auto;
       }
+      @include landscape-orientation {
+        bottom: 0;
+    }
       li {
         display: inline-flex;
         color: $color-white;
